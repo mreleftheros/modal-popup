@@ -1,5 +1,5 @@
 const modal = document.getElementById("modal");
-const closeModal = document.getElementById("closeModal");
+const closeModalBtn = document.getElementById("closeModalBtn");
 const modalBtn = document.getElementById("modalBtn");
 
 
@@ -8,6 +8,11 @@ const displayModal = () => {
   modal.classList.add("active");
 };
 
+// function to close Modal
+const closeModal = () => {
+  modal.classList.remove("active");
+};
+
 // event listeners
 modalBtn.addEventListener("click", displayModal);
-closeModal.addEventListener("click", closeModal);
+closeModalBtn.addEventListener("click", closeModal);
