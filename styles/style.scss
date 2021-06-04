@@ -27,3 +27,36 @@
     }
   }
 }
+
+.modal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transform: translateY(-15rem);
+  min-height: 15rem;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+  width: 30rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease, opacity .5s ease;
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    background: red;
+    cursor: pointer;
+  }
+}
