@@ -1,18 +1,21 @@
-const modal = document.getElementById("modal");
+const modalContainer = document.querySelector(".modal-container");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const modalBtn = document.getElementById("modalBtn");
 
 
 // function to display the modal
 const displayModal = () => {
-  modal.classList.add("active");
+  modalContainer.classList.add("active");
+  modalContainer.classList.add("modal__close");
 };
 
 // function to close Modal
-const closeModal = () => {
-  modal.classList.remove("active");
+const closeModal = e => {
+  console.log(e.target.tagName);
+  modalContainer.classList.remove("active");
+  modalContainer.classList.remove("modal__close");
 };
 
 // event listeners
+modalContainer.addEventListener("click", closeModal);
 modalBtn.addEventListener("click", displayModal);
-closeModalBtn.addEventListener("click", closeModal);
