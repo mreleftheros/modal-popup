@@ -11,9 +11,10 @@ const displayModal = () => {
 
 // function to close Modal
 const closeModal = e => {
-  console.log(e.target.tagName);
-  modalContainer.classList.remove("active");
-  modalContainer.classList.remove("modal__close");
+  if(e.target.classList.contains("modal__close")) {
+    modalContainer.classList.remove("active");
+    modalContainer.classList.remove("modal__close");
+  }
 };
 
 // event listeners

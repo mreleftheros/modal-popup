@@ -49,8 +49,8 @@
   background: rgba(0, 128, 128, .5);
   
   .modal {
-    pointer-events: none;
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 50%;
     opacity: 0;
